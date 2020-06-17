@@ -1,0 +1,49 @@
+/*
+Write a C code to remove the duplicate elements in an array.
+
+
+
+Sample Input:
+
+		arr_size = 8
+
+		arr[] = {4, 3, 2, 4, 5, 6, 6, 9}
+
+
+
+Sample Output:
+
+		4 3 2 5 6 9
+    */
+    #include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                for(int k=j;k<n;k++)
+                {
+                    a[k]=a[k+1];
+                }
+                j--;
+                n--;
+            }
+        }
+    }
+        for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+}
+    
