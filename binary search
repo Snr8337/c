@@ -16,6 +16,7 @@ int main()
     e=n-1;
   //  m=(s+e)/2;
   int x=-1;
+  //compare that always starting should be less then end
     while(s<=e)
     {
         m=(s+e)/2;
@@ -24,7 +25,7 @@ int main()
             x=m;
             break;
         }
-        else if(a[m]<val)
+        else if(a[m]<val)//if value is greater then mid then start=mid+1
         {
             s=m+1;
         }
