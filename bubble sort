@@ -9,9 +9,9 @@ int main()
     {
         cin>>a[i];
     }
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++)//compare each element with others
     {
-        for(int j=0;j<n-i;j++)
+        for(int j=0;j<n-i;j++)      //last value will be fixed so do not take last value into consideration i.e:(j=n-i)
         {
             if(a[j]>a[j+1])
             {
